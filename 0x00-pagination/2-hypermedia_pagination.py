@@ -25,7 +25,7 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
-    
+
     @staticmethod
     def assert_positive_integer_type(value: int) -> None:
         """
@@ -44,7 +44,7 @@ class Server:
         try:
             data = dataset[start:end]
         except IndexError:
-            data =[]
+            data = []
         return data
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:

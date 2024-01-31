@@ -19,7 +19,7 @@ class LRUCache(BaseCaching):
     def put(self, key, item):
         """Function documentation
         """
-        if key is not None or item is not None:
+        if key is not None and item is not None:
             self.cache_data[key] = item
             if key not in self.usedKeys:
                 self.usedKeys.append(key)
@@ -29,7 +29,7 @@ class LRUCache(BaseCaching):
             if len(self.usedKeys) > BaseCaching.MAX_ITEMS:
                 discard = self.usedKeys.pop(0)
                 del self.cache_data[discard]
-                print('DISCARD: {:s}'. format(discard))
+                print('DISCARD: {:s}'.format(discard))
 
     def get(self, key):
         """Function documentation

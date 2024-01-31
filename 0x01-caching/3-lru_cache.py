@@ -29,7 +29,7 @@ class LRUCache(BaseCaching):
             if len(self.usedKeys) > BaseCaching.MAX_ITEMS:
                 discard = self.usedKeys.pop(0)
                 del self.cache_data[discard]
-                print("DISCARD: {:s}". format(discard))
+                print('DISCARD: {:s}'. format(discard))
 
     def get(self, key):
         """Function documentation
